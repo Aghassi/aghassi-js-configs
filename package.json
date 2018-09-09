@@ -1,0 +1,19 @@
+{
+  "name": "das-toolkit",
+  "version": "1.0.0",
+  "description": "Common set of JS configs used by David Aghassi",
+  "main": "index.js",
+  "repository": "git@github.com:Aghassi/das-toolkit.git",
+  "author": "David Aghassi <david.aghassi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.2"
+  }
+}
