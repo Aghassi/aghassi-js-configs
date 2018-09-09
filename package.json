@@ -6,6 +6,9 @@
   "repository": "git@github.com:Aghassi/das-toolkit.git",
   "author": "David Aghassi <david.aghassi@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint lib"
+  },
   "devDependencies": {
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
