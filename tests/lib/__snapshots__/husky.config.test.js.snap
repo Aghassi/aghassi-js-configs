@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`husky config matches default config snapshot 1`] = `
+Object {
+  "hooks": Object {
+    "commit-msg": "commitlint -e $GIT_PARAMS",
+    "pre-commit": "lint-staged",
+  },
+}
+`;
