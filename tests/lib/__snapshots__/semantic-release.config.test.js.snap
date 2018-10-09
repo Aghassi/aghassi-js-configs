@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`semantic-release config matches default config snapshot 1`] = `
+Object {
+  "prepare": Array [
+    "@semantic-release/npm",
+    "@semantic-release/git",
+  ],
+}
+`;
