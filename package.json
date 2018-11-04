@@ -26,7 +26,7 @@
     "jest": "23.6.0",
     "lint-staged": "8.0.4",
     "prettier": "1.14.3",
-    "semantic-release": "15.10.6"
+    "semantic-release": "15.10.7"
   },
   "peerDependencies": {
     "@commitlint/config-conventional": "^7.1.2",
