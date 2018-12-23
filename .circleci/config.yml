@@ -2,34 +2,49 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
+
+aliases:
+  - &docker-image
+    image: circleci/node:10.14.2
+  - &restore-key
+    keys:
+      - v1-dependencies-{{ checksum "yarn.lock" }}
+      # fallback to using the latest cache if no exact match is found
+      - v1-dependencies-
+  - &save-cache
+    paths:
+      - node_modules
+    key: v1-dependencies-{{ checksum "yarn.lock" }}
+
 version: 2
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:10.14.2
-
-    working_directory: ~/repo
-
+    docker: *docker-image
     steps:
       - checkout
 
       # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "yarn.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+      - restore_cache: *restore-key
+      - run: yarn install --frozen-lockfile --non-interactive
+      - save_cache: *save-cache
 
-      - run: yarn install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
-        
       # run tests!
       - run: yarn test
 
+release:
+  docker: *docker-image
+  steps:
+    - checkout
+    - restore_cache: *restore-key
+    - run:
+        name: 'Release'
+        command: 'yarn semantic-release'
 
-
+workflow:
+  - build
+  - release:
+      requires:
+        - build
+      filters:
+        branches:
+          only: master
