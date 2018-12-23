@@ -11,6 +11,7 @@ aliases:
       - v1-dependencies-
   - &save-cache
     paths:
+     -  ~/.cache/yarn
       - node_modules
     key: v1-dependencies-{{ checksum "yarn.lock" }}
 
@@ -24,7 +25,7 @@ jobs:
 
       # Download and cache dependencies
       - restore_cache: *restore-key
-      - run: yarn install --frozen-lockfile --non-interactive
+      - run: yarn install --frozen-lockfile --non-interactive --cache-folder=~/.cache/yarn
       - save_cache: *save-cache
 
       # run tests!
