@@ -30,15 +30,15 @@ jobs:
       # run tests!
       - run: yarn test
 
-release:
-  docker:
-    - image: 'circleci/node:10.14.2'
-  steps:
-    - checkout
-    - restore_cache: *restore-key
-    - run:
-        name: 'Release'
-        command: 'yarn semantic-release'
+  release:
+    docker:
+      - image: 'circleci/node:10.14.2'
+    steps:
+      - checkout
+      - restore_cache: *restore-key
+      - run:
+          name: 'Release'
+          command: 'yarn semantic-release'
 
 workflows:
   version: 2
