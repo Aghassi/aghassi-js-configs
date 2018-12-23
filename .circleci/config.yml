@@ -4,8 +4,6 @@
 #
 
 aliases:
-  - &docker-image
-    image: circleci/node:10.14.2
   - &restore-key
     keys:
       - v1-dependencies-{{ checksum "yarn.lock" }}
@@ -19,7 +17,8 @@ aliases:
 version: 2
 jobs:
   build:
-    docker: *docker-image
+    docker:
+      - image: 'circleci/node:10.14.2'
     steps:
       - checkout
 
@@ -32,7 +31,8 @@ jobs:
       - run: yarn test
 
 release:
-  docker: *docker-image
+  docker:
+    - image: 'circleci/node:10.14.2'
   steps:
     - checkout
     - restore_cache: *restore-key
