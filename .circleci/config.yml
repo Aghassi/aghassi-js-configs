@@ -40,11 +40,14 @@ release:
         name: 'Release'
         command: 'yarn semantic-release'
 
-workflow:
-  - build
-  - release:
-      requires:
-        - build
-      filters:
-        branches:
-          only: master
+workflows:
+  version: 2
+  build_release:
+    jobs:
+      - build
+      - release:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
