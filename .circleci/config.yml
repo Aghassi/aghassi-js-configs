@@ -37,9 +37,10 @@ jobs:
     steps:
       - checkout
       - restore_cache: *restore-key
+      - run: yarn install --frozen-lockfile --non-interactive --cache-folder=~/.cache/yarn
       - run:
           name: 'Release'
-          command: 'yarn semantic-release'
+          command: 'yarn release'
 
 workflows:
   version: 2

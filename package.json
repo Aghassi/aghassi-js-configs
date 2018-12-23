@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint lib",
-    "test": "jest tests"
+    "test": "jest tests",
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "7.1.2",
