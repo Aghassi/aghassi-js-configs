@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`eslint-config-tools config matches default config snapshot 1`] = `
+Object {
+  "extends": Array [
+    "<PROJECT_ROOT>/node_modules/eslint-config-airbnb-base/index.js",
+    "<PROJECT_ROOT>/node_modules/eslint-config-prettier/index.js",
+    "<PROJECT_ROOT>/node_modules/eslint-plugin-eslint-comments/lib/configs/recommended.js",
+  ],
+  "plugins": Array [
+    "prettier",
+  ],
+  "rules": Object {
+    "prettier/prettier": Array [
+      "error",
+    ],
+  },
+}
+`;
