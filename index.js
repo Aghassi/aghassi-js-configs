@@ -6,7 +6,7 @@ const lintStagedConfig = require('./lib/lint-staged.config');
 const prettierConfig = require('./lib/prettier.config');
 const semanticReleaseConfig = require('./lib/semantic-release.config');
 
-module.export = {
+module.exports = {
   commitlint: commitlintConfig,
   'eslint-config-apps': eslintConfigApp,
   'eslint-config-tools': eslintConfigTools,
