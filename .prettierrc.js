@@ -1,1 +1,1 @@
-module.exports = require('./lib/prettier-config.js');
+module.exports = require('./lib/prettier.config.js');
