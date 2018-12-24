@@ -10,6 +10,7 @@ This repo is a collection of common NPM modules and configurations I like to use
 
 ```bash
 yarn add aghassi-js-configs --dev
+yarn add eslint-plugin-eslint-comments eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react --dev
 ```
 
 ## Usage
