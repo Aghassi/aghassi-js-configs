@@ -20,7 +20,7 @@
     "jest": "24.1.0",
     "jest-serializer-path": "0.1.15",
     "lint-staged": "8.1.5",
-    "prettier": "1.16.4",
+    "prettier": "1.17.0",
     "semantic-release": "15.13.3"
   },
   "dependencies": {
