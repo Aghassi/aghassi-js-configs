@@ -16,7 +16,7 @@
     "@semantic-release/git": "7.0.8",
     "@semantic-release/npm": "5.1.4",
     "commitlint": "7.5.2",
-    "husky": "2.2.0",
+    "husky": "2.3.0",
     "jest": "24.1.0",
     "jest-serializer-path": "0.1.15",
     "lint-staged": "8.1.6",
