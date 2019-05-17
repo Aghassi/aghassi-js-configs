@@ -1,6 +1,6 @@
 {
   "name": "aghassi-js-configs",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Common set of JS configs used by David Aghassi",
   "main": "index.js",
   "repository": "git@github.com:Aghassi/aghassi-js-configs.git",
