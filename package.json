@@ -12,10 +12,10 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "7.5.0",
+    "@commitlint/config-conventional": "7.6.0",
     "@semantic-release/git": "7.0.8",
     "@semantic-release/npm": "5.1.7",
-    "commitlint": "7.5.2",
+    "commitlint": "7.6.1",
     "husky": "2.3.0",
     "jest": "24.1.0",
     "jest-serializer-path": "0.1.15",
