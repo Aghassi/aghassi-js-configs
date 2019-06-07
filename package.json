@@ -19,7 +19,7 @@
     "husky": "2.3.0",
     "jest": "24.1.0",
     "jest-serializer-path": "0.1.15",
-    "lint-staged": "8.1.7",
+    "lint-staged": "8.2.0",
     "prettier": "1.18.0",
     "semantic-release": "15.13.12"
   },
