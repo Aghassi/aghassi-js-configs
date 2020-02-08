@@ -19,7 +19,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: 'circleci/node:10.16.1'
+      - image: 'circleci/node:10.19.0'
     steps:
       - checkout
 
@@ -33,7 +33,7 @@ jobs:
 
   release:
     docker:
-      - image: 'circleci/node:10.16.1'
+      - image: 'circleci/node:10.19.0'
     steps:
       - checkout
       - restore_cache: *restore-key
